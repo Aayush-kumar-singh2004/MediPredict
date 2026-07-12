@@ -8,7 +8,7 @@ import "./App.css";
 import "./styles/ai-chat.css";
 import "./styles/animations.css";
 import "./styles/auth.css";
-import "./styles/card.css";
+import "./styles/Card.css";
 import "./styles/components.css";
 import "./styles/footer.css";
 import "./styles/global.css";
