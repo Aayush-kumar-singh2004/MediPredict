@@ -1,0 +1,408 @@
+/* ==========================================================
+   NAVBAR
+========================================================== */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    width:100%;
+    height:82px;
+
+    padding:0 6%;
+
+    background:rgba(5,22,27,.88);
+
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+
+    border-bottom:1px solid rgba(0,245,212,.08);
+
+    box-shadow:
+    0 10px 35px rgba(0,0,0,.35);
+
+    transition:.35s;
+}
+
+/* ==========================================================
+   LOGO
+========================================================== */
+
+.navbar-left{
+    display:flex;
+    align-items:center;
+}
+
+/* .navbar-logo img{
+    width:330px;
+    height:58px;
+    object-fit:contain;
+    
+    transition:.35s;
+} */
+ .navbar-logo img{
+    width:auto;
+    height:58px;
+    object-fit:contain;
+    transition:.35s;
+}
+
+
+.navbar-logo:hover img{
+    transform:scale(1.04);
+    filter:drop-shadow(0 0 12px rgba(0,245,212,.25));
+}
+
+/* ==========================================================
+   MENU
+========================================================== */
+
+.navbar-center{
+    display:flex;
+    align-items:center;
+    gap:40px;
+}
+
+.navbar-link{
+    position:relative;
+
+    color:#BFD5E1;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.navbar-link:hover{
+    color:#00F5D4;
+}
+
+.navbar-link.active{
+    color:#00F5D4;
+}
+
+.navbar-link::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:-8px;
+
+    width:0;
+    height:2px;
+
+    border-radius:20px;
+
+    background:linear-gradient(
+    90deg,
+    #00F5D4,
+    #3B82F6);
+
+    transition:.3s;
+}
+
+.navbar-link:hover::after,
+.navbar-link.active::after{
+
+    width:100%;
+}
+
+/* ==========================================================
+   RIGHT
+========================================================== */
+
+.navbar-right{
+    display:flex;
+    align-items:center;
+    gap:16px;
+}
+
+.user-name{
+
+    color:white;
+
+    font-weight:600;
+}
+
+/* ==========================================================
+   BUTTONS
+========================================================== */
+
+.btn{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:12px 28px;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    transition:.35s;
+}
+
+/* Login */
+
+.btn-login{
+
+    background:transparent;
+
+    color:#00F5D4;
+
+    border:1px solid rgba(0,245,212,.35);
+
+}
+
+.btn-login:hover{
+
+    background:linear-gradient(
+    135deg,
+    #00F5D4,
+    #2563EB);
+
+    color:#041517;
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 0 18px rgba(0,245,212,.35);
+}
+
+/* Signup */
+
+.btn-signup{
+
+    background:linear-gradient(
+    135deg,
+    #00F5D4,
+    #2563EB);
+
+    color:#041517;
+
+    font-weight:700;
+
+    box-shadow:
+    0 0 18px rgba(0,245,212,.18);
+}
+
+.btn-signup:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 0 25px rgba(0,245,212,.35);
+}
+
+/* Logout */
+
+.btn-logout{
+
+    background:transparent;
+
+    color:white;
+
+    border:1px solid rgba(255,255,255,.12);
+
+}
+
+.btn-logout:hover{
+
+    background:linear-gradient(
+    135deg,
+    #00F5D4,
+    #2563EB);
+
+    color:#041517;
+}
+
+/* ==========================================================
+   DARK MODE
+========================================================== */
+
+.theme-toggle-btn{
+
+    width:42px;
+    height:42px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(0,245,212,.15);
+
+    color:#00F5D4;
+
+    cursor:pointer;
+
+    transition:.35s;
+}
+
+.theme-toggle-btn:hover{
+
+    background:linear-gradient(
+    135deg,
+    #00F5D4,
+    #2563EB);
+
+    color:#041517;
+
+    transform:rotate(18deg);
+
+    box-shadow:
+    0 0 18px rgba(0,245,212,.30);
+}
+
+/* ==========================================================
+   HAMBURGER
+========================================================== */
+
+.hamburger{
+
+    display:none;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.35s;
+}
+
+.hamburger:hover{
+
+    color:#00F5D4;
+
+    transform:scale(1.08);
+}
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media(max-width:992px){
+
+.navbar{
+
+padding:0 28px;
+
+}
+
+.hamburger{
+
+display:block;
+
+}
+
+.navbar-center{
+
+position:absolute;
+
+top:82px;
+left:0;
+
+width:100%;
+
+display:none;
+
+flex-direction:column;
+
+gap:28px;
+
+padding:35px;
+
+background:rgba(6,22,28,.98);
+
+backdrop-filter:blur(18px);
+
+border-top:1px solid rgba(0,245,212,.08);
+
+border-bottom:1px solid rgba(0,245,212,.08);
+
+box-shadow:
+0 20px 40px rgba(0,0,0,.35);
+
+}
+
+.navbar-center.mobile.active{
+
+display:flex;
+
+}
+
+.navbar-right{
+
+display:none;
+
+}
+
+.navbar-right.mobile{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+gap:16px;
+
+width:100%;
+
+}
+
+.btn{
+
+width:220px;
+
+}
+
+}
+
+/* ==========================================================
+   MOBILE SMALL
+========================================================== */
+
+@media(max-width:576px){
+
+.navbar{
+
+height:74px;
+
+padding:0 18px;
+
+}
+
+.navbar-logo img{
+
+width:230px;
+
+height:45px;
+
+}
+
+.navbar-center{
+
+top:74px;
+
+}
+
+}
+
+

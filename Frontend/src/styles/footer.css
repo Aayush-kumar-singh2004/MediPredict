@@ -1,0 +1,121 @@
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.site-footer{
+    position: relative;
+
+    background: rgba(5,22,27,.92);
+    border-top: 1px solid rgba(0,245,212,.08);
+
+    padding: 60px 6% 0;
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.footer-inner{
+    max-width: 1300px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+
+    padding-bottom: 40px;
+}
+
+/* ================= BRAND ================= */
+
+.footer-brand{
+    max-width: 380px;
+}
+
+.footer-logo{
+    height: 42px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 16px;
+}
+
+.footer-tagline{
+    color: #94A3B8;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* ================= LINKS ================= */
+
+.footer-links{
+    display: flex;
+    gap: 32px;
+}
+
+.footer-links a{
+    color: #BFD5E1;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.footer-links a:hover{
+    color: #00F5D4;
+}
+
+/* ================= BOTTOM ================= */
+
+.footer-bottom{
+    max-width: 1300px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    padding: 22px 0;
+
+    border-top: 1px solid rgba(255,255,255,.06);
+}
+
+.footer-copyright{
+    color: #7C93A3;
+    font-size: 13px;
+}
+
+.footer-disclaimer{
+    color: #7C93A3;
+    font-size: 12.5px;
+    font-style: italic;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width: 768px){
+
+    .site-footer{
+        padding: 45px 24px 0;
+        text-align: center;
+    }
+
+    .footer-inner{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-links{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-bottom{
+        flex-direction: column;
+        text-align: center;
+    }
+
+}

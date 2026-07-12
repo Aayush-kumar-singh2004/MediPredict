@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+
+# Environment files
+.env
+Backend/.env
+Frontend/.env
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Uploads
+Backend/uploads/*
+
+# Medical Reports
+Medical Reports/
+
+# Dataset
+ML/dataset/
+dataset/
+
+# Model weights
+*.h5
+*.pth
+*.pt
+*.pkl
+
+# Logs
+*.log
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db

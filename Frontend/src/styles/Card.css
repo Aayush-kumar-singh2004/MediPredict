@@ -1,0 +1,964 @@
+/* ==========================================================
+   PREMIUM AI HEALTHCARE CARD
+========================================================== */
+
+.card{
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    width:100%;
+
+    min-height:680px;
+
+    overflow:hidden;
+
+    border-radius:30px;
+
+    background:
+    linear-gradient(
+        180deg,
+        #0B1C25 0%,
+        #08161F 100%
+    );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.45);
+
+    transition:
+        transform .45s ease,
+        box-shadow .45s ease,
+        border-color .45s ease;
+
+}
+
+/* ==========================================================
+   ANIMATED BORDER
+========================================================== */
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:inherit;
+
+    padding:1px;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(0,245,212,.9),
+        rgba(37,99,235,.8),
+        transparent 80%
+    );
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite:xor;
+
+    mask-composite:exclude;
+
+    opacity:0;
+
+    transition:.45s;
+
+}
+
+.card:hover{
+
+    transform:
+        translateY(-14px);
+
+    border-color:rgba(0,245,212,.25);
+
+    box-shadow:
+        0 35px 90px rgba(0,245,212,.18),
+        0 20px 45px rgba(0,0,0,.55);
+
+}
+
+.card:hover::before{
+
+    opacity:1;
+
+}
+
+/* ==========================================================
+   TOP GLOW
+========================================================== */
+
+.card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+
+    height:260px;
+
+    right:-100px;
+
+    top:-120px;
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+        rgba(0,245,212,.22),
+        transparent 70%
+    );
+
+    filter:blur(30px);
+
+    pointer-events:none;
+
+}
+
+/* ==========================================================
+   HERO VIDEO
+========================================================== */
+
+.card-media{
+
+    position:relative;
+
+    width:100%;
+
+    height:280px;
+
+    overflow:hidden;
+
+    background:#06151C;
+
+}
+
+.card-video{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:
+        transform .8s ease;
+
+}
+
+.card:hover .card-video{
+
+    transform:scale(1.08);
+
+}
+
+.card-image{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.card-media::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        to top,
+        rgba(6,21,28,.88),
+        rgba(6,21,28,.12),
+        transparent
+    );
+
+}
+
+/* ==========================================================
+   COMING SOON BADGE
+========================================================== */
+
+.card-badge{
+
+    position:absolute;
+
+    top:20px;
+
+    right:20px;
+
+    z-index:5;
+
+    padding:9px 18px;
+
+    border-radius:40px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #F59E0B,
+        #F97316
+    );
+
+    color:#fff;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    letter-spacing:.4px;
+
+    box-shadow:
+        0 12px 25px rgba(249,115,22,.35);
+
+}
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.card-content{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding:30px;
+
+}
+
+/* .card-small-badge{
+
+    width:fit-content;
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+    background:
+    rgba(0,245,212,.08);
+
+    border:1px solid rgba(0,245,212,.18);
+
+    color:#00F5D4;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+} */
+
+.card-title{
+
+    color:#fff;
+
+    font-size:34px;
+
+    font-weight:800;
+
+    line-height:1.2;
+
+    margin-bottom:18px;
+
+}
+
+.card-description{
+
+    color:#BFD5E1;
+
+    font-size:16px;
+
+    line-height:1.9;
+
+    margin-bottom:30px;
+
+}
+/* ==========================================================
+   STATS SECTION
+========================================================== */
+
+.card-stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:16px;
+
+    margin-bottom:28px;
+
+}
+
+.card-stat{
+
+    padding:18px 12px;
+
+    border-radius:18px;
+
+    background:
+        rgba(255,255,255,.04);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(12px);
+
+    text-align:center;
+
+    transition:.35s ease;
+
+}
+
+.card-stat:hover{
+
+    transform:translateY(-4px);
+
+    border-color:#00F5D4;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0,245,212,.10),
+            rgba(37,99,235,.10)
+        );
+
+    box-shadow:
+        0 10px 25px rgba(0,245,212,.15);
+
+}
+
+.stat-value{
+
+    display:block;
+
+    color:#00F5D4;
+
+    font-size:22px;
+
+    font-weight:800;
+
+    margin-bottom:6px;
+
+}
+
+.stat-label{
+
+    color:#BFD5E1;
+
+    font-size:13px;
+
+    letter-spacing:.5px;
+
+}
+
+/* ==========================================================
+   FEATURES
+========================================================== */
+
+.card-features{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    margin-bottom:34px;
+
+}
+
+.feature-chip{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:10px 18px;
+
+    border-radius:50px;
+
+    background:
+        rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:#DCEAF4;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:.35s ease;
+
+    backdrop-filter:blur(10px);
+
+}
+
+.feature-chip:hover{
+
+    transform:translateY(-3px);
+
+    border-color:#00F5D4;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0,245,212,.14),
+            rgba(37,99,235,.16)
+        );
+
+    color:#fff;
+
+    box-shadow:
+        0 8px 20px rgba(0,245,212,.12);
+
+}
+
+/* ==========================================================
+   BUTTON
+========================================================== */
+
+.card-button{
+
+    margin-top:auto;
+
+    width:100%;
+
+    height:60px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #00F5D4,
+            #2563EB
+        );
+
+    color:#04151B;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    cursor:pointer;
+
+    position:relative;
+
+    overflow:hidden;
+
+    transition:.35s ease;
+
+}
+
+.card-button::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            120deg,
+            transparent,
+            rgba(255,255,255,.35),
+            transparent
+        );
+
+    transform:translateX(-130%);
+
+    transition:.8s ease;
+
+}
+
+.card-button:hover::before{
+
+    transform:translateX(130%);
+
+}
+
+.card-button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 18px 35px rgba(0,245,212,.30);
+
+}
+
+.card-arrow{
+
+    font-size:22px;
+
+    transition:.35s ease;
+
+}
+
+.card-button:hover .card-arrow{
+
+    transform:translateX(8px);
+
+}
+
+/* ==========================================================
+   DISABLED BUTTON
+========================================================== */
+
+.card-button-disabled{
+
+    background:#334155;
+
+    color:#E5E7EB;
+
+    cursor:not-allowed;
+
+    box-shadow:none;
+
+}
+
+.card-button-disabled::before{
+
+    display:none;
+
+}
+
+.card-button-disabled:hover{
+
+    transform:none;
+
+    box-shadow:none;
+
+}
+
+/* ==========================================================
+   FADE ANIMATION
+========================================================== */
+
+.card{
+
+    animation:cardFade .7s ease both;
+
+}
+
+@keyframes cardFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/* ==========================================================
+   ICON PLACEHOLDER
+========================================================== */
+
+.card-icon-placeholder{
+
+    width:140px;
+
+    height:140px;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #00F5D4,
+            #2563EB
+        );
+
+    color:#fff;
+
+    font-size:60px;
+
+    box-shadow:
+        0 0 35px rgba(0,245,212,.30);
+
+    transition:.45s ease;
+
+}
+
+.card:hover .card-icon-placeholder{
+
+    transform:
+        scale(1.08)
+        rotate(6deg);
+
+}
+
+/* ==========================================================
+   COMING SOON CARD
+========================================================== */
+
+.card-coming-soon{
+
+    opacity:.94;
+
+}
+
+.card-coming-soon .card-video{
+
+    filter:
+        grayscale(.15)
+        brightness(.92);
+
+}
+
+.card-coming-soon:hover{
+
+    transform:none;
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.35);
+
+}
+
+/* ==========================================================
+   GLASS HIGHLIGHT
+========================================================== */
+
+.card-content::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.15),
+            transparent
+        );
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:1200px){
+
+.card{
+
+    min-height:640px;
+
+}
+
+.card-media{
+
+    height:250px;
+
+}
+
+.card-title{
+
+    font-size:30px;
+
+}
+
+}
+
+/* ===================================== */
+
+@media(max-width:992px){
+
+.card{
+
+    min-height:auto;
+
+}
+
+.card-media{
+
+    height:220px;
+
+}
+
+.card-content{
+
+    padding:24px;
+
+}
+
+.card-title{
+
+    font-size:28px;
+
+}
+
+.card-description{
+
+    font-size:15px;
+
+}
+
+.card-stats{
+
+    gap:12px;
+
+}
+
+.card-stat{
+
+    padding:15px 10px;
+
+}
+
+.stat-value{
+
+    font-size:20px;
+
+}
+
+.feature-chip{
+
+    font-size:13px;
+
+}
+
+.card-button{
+
+    height:56px;
+
+}
+
+}
+
+/* ===================================== */
+
+@media(max-width:768px){
+
+.card{
+
+    border-radius:24px;
+
+}
+
+.card-media{
+
+    height:210px;
+
+}
+
+.card-content{
+
+    padding:22px;
+
+}
+
+/* .card-small-badge{
+
+    font-size:12px;
+
+} */
+
+.card-title{
+
+    font-size:24px;
+
+}
+
+.card-description{
+
+    font-size:15px;
+
+    line-height:1.8;
+
+}
+
+.card-stats{
+
+    grid-template-columns:1fr;
+
+}
+
+.card-features{
+
+    gap:10px;
+
+}
+
+.feature-chip{
+
+    font-size:12px;
+
+    padding:8px 14px;
+
+}
+
+.card-button{
+
+    height:54px;
+
+    font-size:15px;
+
+}
+
+}
+
+/* ===================================== */
+
+@media(max-width:480px){
+
+.card{
+
+    border-radius:20px;
+
+}
+
+.card-media{
+
+    height:180px;
+
+}
+
+.card-content{
+
+    padding:18px;
+
+}
+
+.card-title{
+
+    font-size:22px;
+
+}
+
+.card-description{
+
+    font-size:14px;
+
+    line-height:1.7;
+
+}
+
+/* .card-small-badge{
+
+    font-size:11px;
+
+    padding:7px 14px;
+
+} */
+
+.card-stat{
+
+    padding:14px;
+
+}
+
+.stat-value{
+
+    font-size:18px;
+
+}
+
+.stat-label{
+
+    font-size:12px;
+
+}
+
+.feature-chip{
+
+    width:100%;
+
+    justify-content:center;
+
+}
+
+.card-button{
+
+    height:50px;
+
+    font-size:14px;
+
+}
+
+}
+
+/* ==========================================================
+   PREMIUM SCROLL ANIMATION
+========================================================== */
+
+.card{
+
+    will-change:transform;
+
+}
+
+.card:hover .feature-chip{
+
+    border-color:rgba(0,245,212,.35);
+
+}
+
+.card:hover .stat-value{
+
+    color:#3B82F6;
+
+    transition:.35s;
+
+}

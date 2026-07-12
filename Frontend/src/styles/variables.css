@@ -1,0 +1,202 @@
+/* ==========================================================
+   MEDIPREDICT CYBER THEME
+   ========================================================== */
+
+:root{
+
+    /* ==========================================================
+       PRIMARY COLORS
+       ========================================================== */
+
+    --primary-color:#00D4FF;
+    --secondary-color:#00FFC8;
+
+    --primary-gradient:linear-gradient(
+        135deg,
+        #00D4FF,
+        #00FFC8
+    );
+
+    --secondary-gradient:linear-gradient(
+        135deg,
+        #1E3A8A,
+        #00D4FF
+    );
+
+    /* ==========================================================
+       BACKGROUND COLORS
+       ========================================================== */
+
+    --background-color:#041517;
+
+    --surface-color:#0A1F22;
+
+    --card-color:#10282C;
+
+    --navbar-color:rgba(4,21,23,.85);
+
+    /* ==========================================================
+       TEXT COLORS
+       ========================================================== */
+
+    --text-primary:#FFFFFF;
+
+    --text-secondary:#B9D7DB;
+
+    --text-light:#7EA2A8;
+
+    /* ==========================================================
+       BORDER
+       ========================================================== */
+
+    --border-color:rgba(0,212,255,.15);
+
+    --border-light:rgba(255,255,255,.05);
+
+    /* ==========================================================
+       SUCCESS
+       ========================================================== */
+
+    --success-color:#22C55E;
+
+    --warning-color:#FACC15;
+
+    --danger-color:#EF4444;
+
+    /* ==========================================================
+       SHADOWS
+       ========================================================== */
+
+    --shadow-sm:
+        0 6px 15px rgba(0,212,255,.08);
+
+    --shadow-md:
+        0 15px 35px rgba(0,212,255,.12);
+
+    --shadow-lg:
+        0 25px 60px rgba(0,212,255,.18);
+
+    /* ==========================================================
+       GLOW EFFECTS
+       ========================================================== */
+
+    --glow-primary:
+        0 0 20px rgba(0,212,255,.35);
+
+    --glow-secondary:
+        0 0 30px rgba(0,255,200,.25);
+
+    /* ==========================================================
+       BORDER RADIUS
+       ========================================================== */
+
+    --radius-sm:10px;
+
+    --radius-md:16px;
+
+    --radius-lg:22px;
+
+    --radius-xl:30px;
+
+    --radius-pill:999px;
+
+    /* ==========================================================
+       TRANSITIONS
+       ========================================================== */
+
+    --transition:all .35s ease;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* :root {
+  /* ===== Colors ===== */
+  --primary-color: #2563eb;
+  --primary-hover: #1d4ed8;
+  --secondary-color: #06b6d4;
+
+  --success-color: #22c55e;
+  --warning-color: #f59e0b;
+  --danger-color: #ef4444;
+
+  --background-color: #f8fafc;
+  --surface-color: #ffffff;
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-light: #64748b;
+
+  --border-color: #e2e8f0;
+
+  /* ===== Gradient ===== */
+  --primary-gradient: linear-gradient(
+    135deg,
+    #2563eb 0%,
+    #06b6d4 100%
+  );
+
+  /* ===== Shadow ===== */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+  --shadow-md: 0 8px 24px rgba(37, 99, 235, 0.12);
+
+  --shadow-lg: 0 16px 40px rgba(37, 99, 235, 0.18);
+
+  /* ===== Radius ===== */
+
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 40px;
+
+  /* ===== Transition ===== */
+
+  --transition: all 0.3s ease;
+
+  /* ===== Max Width ===== */
+
+  --container-width: 1280px;
+}
+
+/* ===== Dark Theme ===== */
+[data-theme="dark"] {
+  --primary-color: #3b82f6;
+  --primary-hover: #60a5fa;
+  --secondary-color: #22d3ee;
+
+  --success-color: #4ade80;
+  --warning-color: #fbbf24;
+  --danger-color: #f87171;
+
+  --background-color: #0f172a;
+  --surface-color: #1e293b;
+
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-light: #94a3b8;
+
+  --border-color: #334155;
+
+  --primary-gradient: linear-gradient(
+    135deg,
+    #3b82f6 0%,
+    #22d3ee 100%
+  );
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.55);
+} */
+
+
+
+

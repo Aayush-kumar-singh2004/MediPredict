@@ -1,0 +1,1022 @@
+/* ==========================================================
+   PART 1 - PAGE + HERO
+========================================================== */
+
+.lung-page{
+
+    min-height:100vh;
+
+    /* padding:120px 20px 80px; */
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+        radial-gradient(circle at top right,
+        rgba(34,211,238,.10),
+        transparent 35%),
+
+        radial-gradient(circle at bottom left,
+        rgba(37,99,235,.10),
+        transparent 35%),
+
+        #07141C;
+
+}
+
+/* Grid Background */
+
+.lung-page::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(255,255,255,.03) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.03) 1px,
+            transparent 1px
+        );
+
+    background-size:60px 60px;
+
+    pointer-events:none;
+
+}
+
+/* ================= HERO ================= */
+
+/* .lung-hero{
+    position:relative;
+    z-index:2;
+    max-width:900px;
+    margin:0 auto 70px;
+    text-align:center;
+
+} */
+ .lung-hero{
+    position:relative;
+    z-index:2;
+    max-width:900px;
+    margin:0 auto 0px;
+    text-align:center;
+    padding: 40px;
+
+}
+
+.lung-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:10px 22px;
+
+    border-radius:999px;
+
+    background:rgba(34,211,238,.12);
+
+    border:1px solid rgba(34,211,238,.25);
+
+    color:#22D3EE;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+    backdrop-filter:blur(12px);
+
+    margin-bottom:28px;
+
+}
+
+.lung-hero h1{
+
+    font-size:60px;
+
+    line-height:1.1;
+
+    font-weight:800;
+
+    color:#FFFFFF;
+
+    margin-bottom:18px;
+
+}
+
+.lung-hero h1 span{
+
+    background:linear-gradient(
+        90deg,
+        #22D3EE,
+        #3B82F6
+    );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+.lung-hero p{
+
+    max-width:760px;
+
+    margin:auto;
+
+    color:#94A3B8;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+}
+
+/* ================= FORM WIDTH ================= */
+
+.lung-form{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:1100px;
+
+    margin:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:35px;
+
+}
+
+/* ================= FADE ANIMATION ================= */
+
+.fade-in{
+
+    animation:fadePage .8s ease;
+
+}
+
+@keyframes fadePage{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/* ==========================================================
+   PART 2 - PATIENT INFORMATION CARD
+========================================================== */
+
+.lung-section{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(13,28,39,.96),
+            rgba(10,22,32,.98)
+        );
+
+    border-radius:28px;
+
+    padding:42px;
+
+    border:1px solid rgba(34,211,238,.12);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.35);
+
+    transition:
+        .35s ease;
+
+}
+
+/* Gradient Top Border */
+
+.lung-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:4px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #22D3EE,
+            #3B82F6
+        );
+
+}
+
+/* Hover */
+
+.lung-section:hover{
+
+    transform:translateY(-6px);
+
+    border-color:rgba(34,211,238,.30);
+
+    box-shadow:
+        0 35px 80px rgba(34,211,238,.12);
+
+}
+
+/* ================= HEADER ================= */
+
+.section-header{
+
+    margin-bottom:35px;
+
+}
+
+.section-header h2{
+
+    color:#FFFFFF;
+
+    font-size:40px;
+
+    font-weight:800;
+
+    margin-bottom:12px;
+
+}
+
+.section-header p{
+
+    color:#94A3B8;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+}
+
+/* ================= GRID ================= */
+
+.lung-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(2,1fr);
+
+    gap:28px;
+
+}
+
+.lung-input-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.lung-full{
+
+    grid-column:1/-1;
+
+}
+
+/* ================= LABEL ================= */
+
+.lung-input-group label{
+
+    color:#E2E8F0;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    margin-bottom:12px;
+
+    letter-spacing:.3px;
+
+}
+
+/* ================= INPUT ================= */
+
+.lung-input-group input,
+
+.lung-input-group select{
+
+    width:100%;
+
+    height:62px;
+
+    border-radius:18px;
+
+    padding:0 22px;
+
+    background:#172733;
+
+    border:1px solid rgba(148,163,184,.18);
+
+    color:#FFFFFF;
+
+    font-size:16px;
+
+    transition:.35s ease;
+
+    outline:none;
+
+}
+
+/* Placeholder */
+
+.lung-input-group input::placeholder{
+
+    color:#7C92A4;
+
+}
+
+/* Focus */
+
+.lung-input-group input:focus,
+
+.lung-input-group select:focus{
+
+    border-color:#22D3EE;
+
+    background:#1B2E3D;
+
+    box-shadow:
+
+        0 0 0 4px rgba(34,211,238,.12),
+
+        0 10px 25px rgba(34,211,238,.12);
+
+}
+
+/* Hover */
+
+.lung-input-group input:hover,
+
+.lung-input-group select:hover{
+
+    border-color:rgba(34,211,238,.28);
+
+}
+
+/* ================= SELECT FIX ================= */
+
+.lung-input-group select{
+
+    appearance:none;
+
+    -webkit-appearance:none;
+
+    -moz-appearance:none;
+
+    cursor:pointer;
+
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M1.5 5l6.5 6 6.5-6'/%3E%3C/svg%3E");
+
+    background-repeat:no-repeat;
+
+    background-position:right 22px center;
+
+    padding-right:60px;
+
+}
+
+/* Dropdown */
+
+.lung-input-group option{
+
+    background:#172733;
+
+    color:#FFFFFF;
+
+}
+/* ==========================================================
+   PART 3 - PREMIUM UPLOAD CARD
+========================================================== */
+
+.upload-box{
+
+    position:relative;
+
+    z-index:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    padding:60px 40px;
+
+    margin-top:20px;
+
+    border:2px dashed rgba(34,211,238,.25);
+
+    border-radius:28px;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.03),
+            rgba(255,255,255,.01)
+        );
+
+    transition:.4s ease;
+
+    overflow:hidden;
+
+}
+
+.upload-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(34,211,238,.08),
+            transparent 70%
+        );
+
+    opacity:0;
+
+    transition:.4s;
+
+    pointer-events:none;
+
+    z-index:0;
+
+}
+
+.upload-box:hover{
+
+    border-color:#22D3EE;
+
+    transform:translateY(-4px);
+
+    box-shadow:
+
+        0 20px 45px rgba(34,211,238,.12);
+
+}
+
+.upload-box:hover::before{
+
+    opacity:1;
+
+}
+
+/* ================= ICON ================= */
+
+.upload-icon{
+
+    width:95px;
+
+    height:95px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:42px;
+
+    color:#22D3EE;
+
+    margin-bottom:28px;
+
+    background:
+        radial-gradient(
+            rgba(34,211,238,.18),
+            rgba(59,130,246,.10)
+        );
+
+    box-shadow:
+        0 0 30px rgba(34,211,238,.18);
+
+    animation:floatUpload 3s ease-in-out infinite;
+
+    pointer-events:none;
+
+    position:relative;
+
+    z-index:1;
+
+}
+
+@keyframes floatUpload{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+/* ================= TITLE ================= */
+
+.upload-box h3{
+
+    color:#FFFFFF;
+
+    font-size:30px;
+
+    font-weight:700;
+
+    margin-bottom:14px;
+
+}
+
+.upload-box p{
+
+    color:#94A3B8;
+
+    font-size:16px;
+
+    line-height:1.8;
+
+    max-width:500px;
+
+    margin-bottom:35px;
+
+}
+
+/* ================= UPLOAD BUTTON ================= */
+.upload-btn{
+
+    position:relative;
+
+    z-index:2;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:16px 42px;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    color:#07141C;
+
+    background:
+        linear-gradient(
+            135deg,
+            #22D3EE,
+            #3B82F6
+        );
+
+    transition:.35s;
+
+    user-select:none;
+
+}
+
+.upload-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+
+        0 15px 35px rgba(34,211,238,.30);
+
+}
+
+/* ================= BUTTON AREA ================= */
+
+.lung-action-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    margin-top:35px;
+
+    flex-wrap:wrap;
+
+}
+
+/* ================= BUTTONS ================= */
+
+.primary-btn,
+.secondary-btn{
+
+    height:58px;
+
+    padding:0 34px;
+
+    border:none;
+
+    border-radius:16px;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    transition:.35s;
+
+    text-decoration:none;
+
+}
+
+.primary-btn{
+
+    color:#06141D;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #22D3EE,
+            #2563EB
+        );
+
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+
+        0 20px 40px rgba(34,211,238,.30);
+
+}
+
+.secondary-btn{
+
+    color:#D8F7FF;
+
+    background:#172733;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.secondary-btn:hover{
+
+    border-color:#22D3EE;
+
+    background:#1C3140;
+
+}
+
+/* ==========================================================
+   PART 4 - RESULT SECTION
+========================================================== */
+
+.prediction-result{
+    position:relative;
+    z-index:2;
+    max-width:1100px;
+    margin:auto;
+}
+
+.result-card{
+    background:linear-gradient(
+        180deg,
+        rgba(13,28,39,.96),
+        rgba(10,22,32,.98)
+    );
+    border-radius:28px;
+    padding:45px;
+    border:1px solid rgba(34,211,238,.15);
+    box-shadow:0 30px 70px rgba(0,0,0,.35);
+}
+
+.result-badge{
+    display:inline-block;
+    padding:8px 18px;
+    border-radius:999px;
+    background:rgba(34,211,238,.12);
+    color:#22D3EE;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.result-card h2{
+    color:#FFF;
+    font-size:38px;
+    margin-bottom:35px;
+}
+
+.patient-info{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    margin-bottom:35px;
+}
+
+.patient-info div{
+    background:#13232F;
+    border-radius:18px;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+}
+
+.patient-info strong{
+    color:#22D3EE;
+    margin-bottom:8px;
+}
+
+.patient-info span{
+    color:#FFF;
+    font-size:18px;
+}
+
+.prediction-status{
+    margin:30px 0;
+    padding:20px;
+    border-radius:18px;
+    text-align:center;
+    font-size:22px;
+    font-weight:700;
+}
+
+.prediction-status.healthy{
+    background:rgba(34,197,94,.12);
+    color:#4ADE80;
+    border:1px solid rgba(34,197,94,.3);
+}
+
+.prediction-status.danger{
+    background:rgba(239,68,68,.12);
+    color:#F87171;
+    border:1px solid rgba(239,68,68,.3);
+}
+
+/* ==========================================================
+   AI CARD
+========================================================== */
+
+.ai-card{
+    margin-top:30px;
+    background:#13232F;
+    border-radius:20px;
+    padding:28px;
+    border:1px solid rgba(34,211,238,.08);
+}
+
+.ai-card-header{
+    color:#22D3EE;
+    font-size:20px;
+    font-weight:700;
+    margin-bottom:16px;
+}
+
+.ai-text,
+.ai-loading{
+    color:#CBD5E1;
+    line-height:1.9;
+    font-size:16px;
+}
+
+/* ==========================================================
+   RESULT BUTTONS
+========================================================== */
+
+.result-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-top:40px;
+    flex-wrap:wrap;
+}
+
+/* ==========================================================
+   MODAL
+========================================================== */
+
+.lung-modal-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.75);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:999;
+    backdrop-filter:blur(6px);
+}
+
+.lung-modal{
+    width:90%;
+    max-width:520px;
+    background:#10202B;
+    border-radius:24px;
+    padding:35px;
+    text-align:center;
+    border:1px solid rgba(34,211,238,.2);
+}
+
+.lung-modal h2{
+    color:#FFF;
+    margin-bottom:15px;
+}
+
+.lung-modal p{
+    color:#94A3B8;
+    line-height:1.8;
+}
+
+.lung-modal-buttons{
+    display:flex;
+    gap:18px;
+    justify-content:center;
+    margin:30px 0;
+    flex-wrap:wrap;
+}
+
+.close-btn{
+    width:100%;
+    height:55px;
+    border:none;
+    border-radius:14px;
+    background:#EF4444;
+    color:#FFF;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:700;
+}
+
+.close-btn:hover{
+    background:#DC2626;
+}
+
+/* ==========================================================
+   ERROR
+========================================================== */
+
+.error-message{
+    margin-top:25px;
+    text-align:center;
+    color:#F87171;
+    font-weight:600;
+}
+
+/* ==========================================================
+   LOADER
+========================================================== */
+
+.loader-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:9999;
+    backdrop-filter:blur(4px);
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width:900px){
+
+    .lung-grid{
+        grid-template-columns:1fr;
+    }
+
+    .patient-info{
+        grid-template-columns:1fr;
+    }
+
+    .lung-hero h1{
+        font-size:44px;
+    }
+
+    .section-header h2{
+        font-size:32px;
+    }
+
+    .upload-box{
+        padding:45px 20px;
+    }
+
+    .lung-section{
+        padding:30px;
+    }
+
+}
+
+@media (max-width:600px){
+
+    .lung-page{
+        /* padding:100px 15px 60px; */
+        /* padding:10px 10px 10px; */
+    }
+
+    .lung-hero h1{
+        font-size:34px;
+    }
+
+    .lung-hero p{
+        font-size:16px;
+    }
+
+    .lung-action-buttons,
+    .result-buttons,
+    .lung-modal-buttons{
+        flex-direction:column;
+    }
+
+    .primary-btn,
+    .secondary-btn,
+    .close-btn{
+        width:100%;
+    }
+
+    .upload-icon{
+        width:75px;
+        height:75px;
+        font-size:34px;
+    }
+
+}

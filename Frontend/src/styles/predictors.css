@@ -1,0 +1,222 @@
+/* ==========================================
+   PREDICTORS PAGE
+========================================== */
+
+.predictor-container{
+
+    position:relative;
+
+    width:100%;
+    min-height:100vh;
+
+    padding:140px 6% 100px;
+
+    background:
+        radial-gradient(circle at top,#12385c 0%,transparent 35%),
+        linear-gradient(180deg,#07181d 0%,#05141b 100%);
+
+    overflow:hidden;
+}
+
+/* Background Grid */
+
+.predictor-container::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+        linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+
+    background-size:64px 64px;
+
+    opacity:.25;
+
+    pointer-events:none;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.predictor-header{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+}
+
+.predictor-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:10px 24px;
+
+    border-radius:40px;
+
+    background:rgba(0,245,212,.08);
+
+    border:1px solid rgba(0,245,212,.15);
+
+    backdrop-filter:blur(12px);
+
+    color:#00F5D4;
+
+    font-weight:600;
+
+    margin-bottom:28px;
+}
+
+.predictor-header h1{
+
+    font-size:64px;
+
+    font-weight:800;
+
+    color:#fff;
+
+    line-height:1.15;
+
+    margin-bottom:24px;
+}
+
+.predictor-header h1 span{
+
+    background:linear-gradient(
+        90deg,
+        #00F5D4,
+        #3B82F6
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.predictor-header p{
+
+    max-width:760px;
+
+    margin:auto;
+
+    color:#BFD5E1;
+
+    line-height:1.9;
+
+    font-size:19px;
+}
+
+/* ==========================================
+   CARD GRID
+========================================== */
+
+.card-container{
+
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,minmax(360px,1fr));
+
+    gap:40px;
+
+    max-width:1100px;
+
+    margin:90px auto 0;
+}
+
+.card-item{
+
+    display:flex;
+
+    width:100%;
+}
+
+.card-item-disabled{
+
+    cursor:not-allowed;
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media(max-width:992px){
+
+.predictor-container{
+
+padding:120px 30px 80px;
+
+}
+
+.predictor-header h1{
+
+font-size:48px;
+
+}
+
+.predictor-header p{
+
+font-size:17px;
+
+}
+
+.card-container{
+
+grid-template-columns:1fr;
+
+max-width:500px;
+
+gap:35px;
+
+}
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:768px){
+.predictor-container{
+padding:110px 20px 70px;
+}
+
+.predictor-header{
+text-align:center;
+}
+
+.predictor-header h1{
+font-size:36px;
+}
+
+.predictor-header p{
+font-size:16px;
+line-height:1.8;
+}
+
+.predictor-badge{
+font-size:14px;
+padding:8px 18px;
+}
+
+.card-container{
+margin-top:60px;
+gap:28px;
+}
+}

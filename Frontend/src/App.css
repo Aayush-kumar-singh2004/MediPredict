@@ -1,0 +1,521 @@
+/* ==========================================================
+   GLOBAL RESET
+========================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Mulish",sans-serif;
+    font-size:16px;
+    overflow-x:hidden;
+}
+
+/* ==========================================================
+   COMMON LINKS
+========================================================== */
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button{
+    font-family:inherit;
+}
+
+/* ==========================================================
+   COMMON ANIMATIONS
+========================================================== */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+
+}
+
+@keyframes slideInLeft{
+
+    from{
+        transform:translateX(-100%);
+    }
+
+    to{
+        transform:translateX(0);
+    }
+
+}
+
+@keyframes slideInRight{
+
+    from{
+        transform:translateX(100%);
+    }
+
+    to{
+        transform:translateX(0);
+    }
+
+}
+
+@keyframes zoomIn{
+
+    from{
+        transform:scale(.7);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+
+}
+
+/* ==========================================================
+   GUEST LOGIN
+========================================================== */
+
+.guest-login-button{
+
+    margin-top:10px;
+
+    padding:10px 22px;
+
+    border:none;
+
+    border-radius:6px;
+
+    background:#6C757D;
+
+    color:#FFF;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.guest-login-button:hover{
+
+    background:#5A6268;
+
+}
+
+/* ==========================================================
+   GLOBAL FADE CLASS
+========================================================== */
+
+.fade-in{
+
+    animation:fadeIn .8s ease;
+
+}
+
+/* ==========================================================
+   IMPORTANT
+   Lung Page CSS has been moved to:
+
+   src/styles/lungpage.css
+
+   Do NOT keep any .lung-page,
+   .lung-page-container,
+   .lung-page-button,
+   .loader-overlay,
+   .prediction-text etc here.
+
+========================================================== */
+
+/* About Us */
+/* ==========================================================
+   ABOUT US
+========================================================== */
+
+.our__team{
+
+    padding:4rem 2rem;
+
+    background:#F8FAFC;
+
+    animation:fadeIn 1s ease;
+
+    overflow:hidden;
+
+    min-height:87vh;
+
+}
+
+.team__content{
+
+    text-align:center;
+
+    margin-bottom:4rem;
+
+}
+
+.team__content h6{
+
+    font-size:1rem;
+
+    color:#64748B;
+
+    margin-bottom:.5rem;
+
+    animation:slideInLeft .8s ease;
+
+}
+
+.team__content h2{
+
+    font-size:2.7rem;
+
+    color:#1E293B;
+
+    font-weight:800;
+
+    animation:slideInRight .8s ease;
+
+}
+
+.highlight{
+
+    color:#2563EB;
+
+}
+
+.team__wrapper{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:2rem;
+
+}
+
+.team__item{
+
+    width:calc(25% - 2rem);
+
+    background:#FFF;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:
+
+        0 15px 40px rgba(15,23,42,.08);
+
+    transition:
+
+        transform .35s,
+
+        box-shadow .35s;
+
+    animation:zoomIn .8s ease;
+
+    cursor:pointer;
+
+}
+
+.team__item:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+
+        0 25px 55px rgba(37,99,235,.15);
+
+}
+
+.team__img{
+
+    width:100%;
+
+    height:220px;
+
+    overflow:hidden;
+
+}
+
+.team__img img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:transform .4s;
+
+}
+
+.team__item:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.team__details{
+
+    padding:1.6rem;
+
+    text-align:center;
+
+}
+
+.team__details h4{
+
+    color:#1E293B;
+
+    font-size:1.2rem;
+
+    margin-bottom:.5rem;
+
+}
+
+.team__details p{
+
+    color:#64748B;
+
+    margin-bottom:1rem;
+
+}
+
+.team__member-social{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:1rem;
+
+}
+
+.team__member-social span{
+
+    transition:.3s;
+
+}
+
+.team__member-social span:hover{
+
+    transform:scale(1.2);
+
+}
+
+.team__member-social a{
+
+    color:#2563EB;
+
+}
+
+.team__member-social svg{
+
+    font-size:1.5rem;
+
+}
+
+/* ==========================================================
+   MODAL ANIMATION
+========================================================== */
+
+.ReactModal__Content{
+
+    opacity:0;
+
+    transform:translate(-50%,-50%) scale(.85);
+
+    transition:
+
+        opacity .35s,
+
+        transform .35s;
+
+}
+
+.ReactModal__Content--after-open{
+
+    opacity:1;
+
+    transform:translate(-50%,-50%) scale(1);
+
+}
+
+.ReactModal__Content--before-close{
+
+    opacity:0;
+
+    transform:translate(-50%,-50%) scale(.85);
+
+}
+
+.modal-image{
+
+    width:100%;
+
+    max-height:90vh;
+
+    display:block;
+
+    object-fit:contain;
+
+}
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width:992px){
+
+    .team__item{
+
+        width:calc(50% - 1rem);
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .our__team{
+
+        overflow:auto;
+
+        padding:3rem 1.5rem;
+
+    }
+
+    .team__content h2{
+
+        font-size:2rem;
+
+    }
+
+    .team__item{
+
+        width:100%;
+
+        max-width:420px;
+
+    }
+
+}
+
+@media (max-width:576px){
+
+    .team__content h2{
+
+        font-size:1.6rem;
+
+    }
+
+}
+
+/* ==========================================================
+   COMING SOON CARD
+========================================================== */
+
+.card-item-disabled{
+
+    cursor:pointer;
+
+}
+
+.card-coming-soon{
+
+    position:relative;
+
+    opacity:.65;
+
+    filter:grayscale(35%);
+
+    transition:.35s;
+
+}
+
+.card-coming-soon:hover{
+
+    opacity:.9;
+
+    filter:none;
+
+}
+
+.card-badge{
+
+    position:absolute;
+
+    top:14px;
+
+    right:14px;
+
+    padding:6px 14px;
+
+    border-radius:999px;
+
+    background:linear-gradient(
+        135deg,
+        #F59E0B,
+        #F97316
+    );
+
+    color:#FFF;
+
+    font-size:.75rem;
+
+    font-weight:700;
+
+    letter-spacing:.4px;
+
+    z-index:5;
+
+    box-shadow:
+        0 8px 18px rgba(249,115,22,.35);
+
+}
+
+/* ==========================================================
+   CARD ICON PLACEHOLDER
+========================================================== */
+
+.card-icon-placeholder{
+
+    width:100%;
+
+    min-height:180px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:20px;
+
+    font-size:64px;
+
+    color:#94A3B8;
+
+    background:
+        linear-gradient(
+            135deg,
+            #F8FAFC,
+            #E2E8F0
+        );
+}
