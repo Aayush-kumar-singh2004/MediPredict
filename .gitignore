@@ -20,20 +20,13 @@ Medical Reports/
 ML/dataset/
 dataset/
 
-# # Model weights
-# *.h5
-# *.pth
-# *.pt
-# *.pkl
-
 # Model weights
 *.h5
-!ML/Lung Cancer Prediction/LCD.h5
 *.pth
 *.pt
 *.pkl
-# Logs
-*.log
+
+
 
 # VS Code
 .vscode/
