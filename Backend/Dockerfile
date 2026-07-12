@@ -22,12 +22,12 @@ RUN npm install
 COPY requirements.txt ./
 
 # Install Python packages
-RUN pip install --no-cache-dir -r requirements.txt
+RUN python3 -m pip install --no-cache-dir --break-system-packages -r requirements.txt
 
 # Copy backend source
 COPY . .
 
 # Render provides PORT
-EXPOSE 10000
+EXPOSE 8000
 
 CMD ["npm", "start"]
