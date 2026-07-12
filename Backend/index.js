@@ -1,23 +1,21 @@
 // require('dotenv').config({path:'./env'})
-import express from "express";
 import dotenv from "dotenv";
-import connectDB from "./db/index.js";
-import { app } from "./app.js";
 import os from "os";
-import path from "path";
+import { app } from "./app.js";
+import connectDB from "./db/index.js";
 
 //uncomment after deployment
-dotenv.config({ path: "./env" });
+// dotenv.config({ path: "./env" });
 
 //remove after deployement
-// dotenv.config();
+dotenv.config();
 
 
-const _dirname = path.dirname("");
+// const _dirname = path.dirname("");
 
-// use only for  production build ke liye hota hai
-const frontendBP = path.join(_dirname, "../Frontend/dist");
-app.use(express.static(frontendBP));
+// // use only for  production build ke liye hota hai
+// const frontendBP = path.join(_dirname, "../Frontend/dist");
+// app.use(express.static(frontendBP));
 
 // Function to get the local IP address
 function getLocalIpAddress() {
