@@ -11,20 +11,13 @@ __pycache__/
 *.pyc
 
 # Uploads
-Backend/uploads/*
 
-# Medical Reports
-Medical Reports/
 
-# Dataset
-ML/dataset/
-dataset/
 
 # Model weights
-*.h5
-*.pth
-*.pt
-*.pkl
+# *.pth
+# *.pt
+# *.pkl
 
 
 
